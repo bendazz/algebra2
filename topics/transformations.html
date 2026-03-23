@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformations – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/transform-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .transform-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .replay-btn {
+      margin-top: 0.75rem;
+      padding: 0.45rem 1.25rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .replay-btn:hover { background: var(--primary-dark); }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Transformations</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <p style="color:var(--text-light); margin-bottom:2rem;">
+      For each function, identify the parent function and describe the transformations.
+      Reveal the solution to see a step-by-step explanation and an animated graph.
+    </p>
+
+    <!-- === 1. Quadratic — right & up === -->
+    <section class="topic-section">
+      <h2>Quadratic Parent</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Sketch the parent function and state the transformations: \( g(x) = (x - 4)^2 + 3 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = x^2 \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Horizontal shift <strong>right 4</strong> units</li>
+              <li>Vertical shift <strong>up 3</strong> units</li>
+            </ul>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="quadratic" data-h="4" data-k="3" data-a="1"
+                data-label="g(x) = (x−4)² + 3"
+                data-xmin="-3" data-xmax="10" data-ymin="-2" data-ymax="12"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Sketch the parent function and state the transformations: \( g(x) = -(x - 2)^2 + 5 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = x^2 \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Reflection over the <strong>x-axis</strong></li>
+              <li>Horizontal shift <strong>right 2</strong> units</li>
+              <li>Vertical shift <strong>up 5</strong> units</li>
+            </ul>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="quadratic" data-h="2" data-k="5" data-a="-1"
+                data-label="g(x) = −(x−2)² + 5"
+                data-xmin="-4" data-xmax="8" data-ymin="-6" data-ymax="8"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === 2. Square Root === -->
+    <section class="topic-section">
+      <h2>Square Root Parent</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Sketch the parent function and state the transformations: \( g(x) = \sqrt{x - 1} + 2 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = \sqrt{x} \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Horizontal shift <strong>right 1</strong> unit</li>
+              <li>Vertical shift <strong>up 2</strong> units</li>
+            </ul>
+            <p>The new starting point moves from \( (0,0) \) to \( (1,2) \).</p>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="sqrt" data-h="1" data-k="2" data-a="1"
+                data-label="g(x) = √(x−1) + 2"
+                data-xmin="-2" data-xmax="10" data-ymin="-2" data-ymax="7"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Sketch the parent function and state the transformations: \( g(x) = -\sqrt{x + 3} + 1 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = \sqrt{x} \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Reflection over the <strong>x-axis</strong></li>
+              <li>Horizontal shift <strong>left 3</strong> units</li>
+              <li>Vertical shift <strong>up 1</strong> unit</li>
+            </ul>
+            <p>The new starting point moves from \( (0,0) \) to \( (-3,1) \).</p>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="sqrt" data-h="-3" data-k="1" data-a="-1"
+                data-label="g(x) = −√(x+3) + 1"
+                data-xmin="-5" data-xmax="8" data-ymin="-4" data-ymax="4"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === 3. Absolute Value === -->
+    <section class="topic-section">
+      <h2>Absolute Value Parent</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Sketch the parent function and state the transformations: \( g(x) = |x + 3| - 2 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = |x| \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Horizontal shift <strong>left 3</strong> units</li>
+              <li>Vertical shift <strong>down 2</strong> units</li>
+            </ul>
+            <p>The vertex moves from \( (0,0) \) to \( (-3,-2) \).</p>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="abs" data-h="-3" data-k="-2" data-a="1"
+                data-label="g(x) = |x+3| − 2"
+                data-xmin="-9" data-xmax="5" data-ymin="-5" data-ymax="7"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === 4. Cubic === -->
+    <section class="topic-section">
+      <h2>Cubic Parent</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Sketch the parent function and state the transformations: \( g(x) = (x + 1)^3 - 4 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Parent function:</strong> \( f(x) = x^3 \)</p>
+            <p><strong>Transformations:</strong></p>
+            <ul>
+              <li>Horizontal shift <strong>left 1</strong> unit</li>
+              <li>Vertical shift <strong>down 4</strong> units</li>
+            </ul>
+            <p>The inflection point moves from \( (0,0) \) to \( (-1,-4) \).</p>
+            <div class="plot-container">
+              <canvas class="transform-canvas"
+                data-parent="cubic" data-h="-1" data-k="-4" data-a="1"
+                data-label="g(x) = (x+1)³ − 4"
+                data-xmin="-5" data-xmax="4" data-ymin="-9" data-ymax="5"></canvas>
+              <button class="replay-btn">Replay Animation</button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

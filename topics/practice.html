@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extra Practice – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/practice.js"></script>
+  <style>
+    .practice-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .practice-controls select {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+      border: 2px solid var(--primary-light);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text);
+      cursor: pointer;
+      flex: 1;
+      min-width: 180px;
+      max-width: 320px;
+    }
+    .practice-controls select:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    #new-problem {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 1.25rem;
+      border: none;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    #new-problem:hover {
+      background: var(--primary-dark);
+    }
+    .practice-counter {
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+    .practice-counter span {
+      font-weight: 700;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Extra Practice</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <div class="practice-controls">
+      <select id="topic-select">
+        <option value="mix">Random Mix</option>
+      </select>
+      <button id="new-problem">New Problem</button>
+      <div class="practice-counter">
+        Problems: <span id="counter">0</span>
+      </div>
+    </div>
+
+    <div id="problem-area"></div>
+
+  </main>
+
+</body>
+</html>

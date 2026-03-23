@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanding Logarithms – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <style>
+    .rule-box {
+      background: #f1f0ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Expanding Logarithms</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <div class="rule-box">
+      <strong>Key Properties:</strong><br>
+      <strong>Product Rule:</strong> \( \log_b(MN) = \log_b(M) + \log_b(N) \)<br>
+      <strong>Quotient Rule:</strong> \( \log_b\!\left(\dfrac{M}{N}\right) = \log_b(M) - \log_b(N) \)<br>
+      <strong>Power Rule:</strong> \( \log_b(M^c) = c \cdot \log_b(M) \)
+    </div>
+
+    <!-- === Products Only === -->
+    <section class="topic-section">
+      <h2>Expanding Products</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Expand: \( \log_2(3xy^3) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the <strong>product rule</strong> to separate the factors:</p>
+            $$ \log_2(3) + \log_2(x) + \log_2(y^3) $$
+            <p>Apply the <strong>power rule</strong> to \( \log_2(y^3) \):</p>
+            <p class="answer">Answer: \( \log_2(3) + \log_2(x) + 3\log_2(y) \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Expand: \( \log_4(5x^3 y^2 z) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the <strong>product rule</strong> to separate all factors:</p>
+            $$ \log_4(5) + \log_4(x^3) + \log_4(y^2) + \log_4(z) $$
+            <p>Apply the <strong>power rule</strong> to each term with an exponent:</p>
+            <p class="answer">Answer: \( \log_4(5) + 3\log_4(x) + 2\log_4(y) + \log_4(z) \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Quotients === -->
+    <section class="topic-section">
+      <h2>Expanding Quotients</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Expand: \( \log_5\!\left(\dfrac{x^2}{y}\right) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the <strong>quotient rule</strong>:</p>
+            $$ \log_5(x^2) - \log_5(y) $$
+            <p>Apply the <strong>power rule</strong> to \( \log_5(x^2) \):</p>
+            <p class="answer">Answer: \( 2\log_5(x) - \log_5(y) \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Expand: \( \log\!\left(\dfrac{7x^4}{z^3}\right) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the <strong>quotient rule</strong>:</p>
+            $$ \log(7x^4) - \log(z^3) $$
+            <p>Apply the <strong>product rule</strong> to the numerator:</p>
+            $$ \log(7) + \log(x^4) - \log(z^3) $$
+            <p>Apply the <strong>power rule</strong>:</p>
+            <p class="answer">Answer: \( \log(7) + 4\log(x) - 3\log(z) \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Roots and Combinations === -->
+    <section class="topic-section">
+      <h2>Roots and Combined Expressions</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Expand: \( \ln\!\left(\sqrt{x^3 y}\right) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Rewrite the square root as an exponent of \( \frac{1}{2} \):</p>
+            $$ \ln\!\left((x^3 y)^{1/2}\right) $$
+            <p>Apply the <strong>power rule</strong>:</p>
+            $$ \frac{1}{2}\,\ln(x^3 y) $$
+            <p>Apply the <strong>product rule</strong> inside:</p>
+            $$ \frac{1}{2}\bigl[\ln(x^3) + \ln(y)\bigr] $$
+            <p>Apply the <strong>power rule</strong> to \( \ln(x^3) \) and distribute:</p>
+            $$ \frac{1}{2}\bigl[3\ln(x) + \ln(y)\bigr] $$
+            <p class="answer">Answer: \( \dfrac{3}{2}\ln(x) + \dfrac{1}{2}\ln(y) \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Expand: \( \log_3\!\left(\dfrac{2x^2 y^5}{z^4}\right) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the <strong>quotient rule</strong>:</p>
+            $$ \log_3(2x^2 y^5) - \log_3(z^4) $$
+            <p>Apply the <strong>product rule</strong> to expand the numerator:</p>
+            $$ \log_3(2) + \log_3(x^2) + \log_3(y^5) - \log_3(z^4) $$
+            <p>Apply the <strong>power rule</strong> to each term:</p>
+            <p class="answer">Answer: \( \log_3(2) + 2\log_3(x) + 5\log_3(y) - 4\log_3(z) \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

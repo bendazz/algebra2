@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asymptotes – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/asymptote-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .asymptote-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .asymptote-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 0.95rem;
+    }
+    .asymptote-table th,
+    .asymptote-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    .asymptote-table th {
+      background: #f1f5f9;
+      font-weight: 600;
+      width: 45%;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Asymptotes</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <p style="color:var(--text-light); margin-bottom:2rem;">
+      For each rational function, find all horizontal, vertical, and slant asymptotes. Write <strong>DNE</strong> if an asymptote type does not exist.
+    </p>
+
+    <!-- === Horizontal asymptote y = 0 === -->
+    <section class="topic-section">
+      <h2>Degree of Numerator &lt; Degree of Denominator</h2>
+
+      <!-- Problem 1 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Find all asymptotes of \( f(x) = \dfrac{2x + 3}{x^2 - 4} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptotes:</strong> Set the denominator equal to zero:</p>
+            $$ x^2 - 4 = 0 \implies (x-2)(x+2) = 0 $$
+            <p>So \( x = 2 \) and \( x = -2 \).</p>
+
+            <p><strong>Horizontal asymptote:</strong> The degree of the numerator (1) is <em>less than</em> the degree of the denominator (2), so:</p>
+            $$ y = 0 $$
+
+            <p><strong>Slant asymptote:</strong> DNE (only occurs when the numerator's degree is exactly one more than the denominator's).</p>
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptotes</th><td>\( x = 2 \) and \( x = -2 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>\( y = 0 \)</td></tr>
+              <tr><th>Slant Asymptote</th><td>DNE</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="2,3" data-den="1,0,-4"
+                data-va="2,-2" data-ha="0" data-sa-m="" data-sa-b=""
+                data-xmin="-8" data-xmax="8" data-ymin="-6" data-ymax="6"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Problem 2 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Find all asymptotes of \( f(x) = \dfrac{3}{x^2 - x - 6} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptotes:</strong> Factor the denominator:</p>
+            $$ x^2 - x - 6 = (x - 3)(x + 2) = 0 $$
+            <p>So \( x = 3 \) and \( x = -2 \).</p>
+
+            <p><strong>Horizontal asymptote:</strong> The degree of the numerator (0) is less than the degree of the denominator (2):</p>
+            $$ y = 0 $$
+
+            <p><strong>Slant asymptote:</strong> DNE.</p>
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptotes</th><td>\( x = 3 \) and \( x = -2 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>\( y = 0 \)</td></tr>
+              <tr><th>Slant Asymptote</th><td>DNE</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="3" data-den="1,-1,-6"
+                data-va="3,-2" data-ha="0" data-sa-m="" data-sa-b=""
+                data-xmin="-6" data-xmax="7" data-ymin="-8" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Horizontal asymptote y = k === -->
+    <section class="topic-section">
+      <h2>Degree of Numerator = Degree of Denominator</h2>
+
+      <!-- Problem 3 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Find all asymptotes of \( f(x) = \dfrac{4x^2 - 1}{x^2 + 3x} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptotes:</strong> Factor the denominator:</p>
+            $$ x^2 + 3x = x(x + 3) = 0 $$
+            <p>So \( x = 0 \) and \( x = -3 \).</p>
+
+            <p><strong>Horizontal asymptote:</strong> The degrees are equal (both 2), so take the ratio of leading coefficients:</p>
+            $$ y = \frac{4}{1} = 4 $$
+
+            <p><strong>Slant asymptote:</strong> DNE (degrees are equal, not one apart).</p>
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptotes</th><td>\( x = 0 \) and \( x = -3 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>\( y = 4 \)</td></tr>
+              <tr><th>Slant Asymptote</th><td>DNE</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="4,0,-1" data-den="1,3,0"
+                data-va="0,-3" data-ha="4" data-sa-m="" data-sa-b=""
+                data-xmin="-8" data-xmax="8" data-ymin="-10" data-ymax="14"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Problem 4 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Find all asymptotes of \( f(x) = \dfrac{3x^2 + 2}{x^2 - 9} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptotes:</strong> Factor the denominator:</p>
+            $$ x^2 - 9 = (x - 3)(x + 3) = 0 $$
+            <p>So \( x = 3 \) and \( x = -3 \).</p>
+
+            <p><strong>Horizontal asymptote:</strong> The degrees are equal (both 2), so take the ratio of leading coefficients:</p>
+            $$ y = \frac{3}{1} = 3 $$
+
+            <p><strong>Slant asymptote:</strong> DNE.</p>
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptotes</th><td>\( x = 3 \) and \( x = -3 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>\( y = 3 \)</td></tr>
+              <tr><th>Slant Asymptote</th><td>DNE</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="3,0,2" data-den="1,0,-9"
+                data-va="3,-3" data-ha="3" data-sa-m="" data-sa-b=""
+                data-xmin="-8" data-xmax="8" data-ymin="-10" data-ymax="14"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Slant asymptote === -->
+    <section class="topic-section">
+      <h2>Degree of Numerator = Degree of Denominator + 1 (Slant Asymptote)</h2>
+
+      <!-- Problem 5 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Find all asymptotes of \( f(x) = \dfrac{2x^2 - x + 3}{x + 1} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptote:</strong> Set the denominator equal to zero:</p>
+            $$ x + 1 = 0 \implies x = -1 $$
+
+            <p><strong>Horizontal asymptote:</strong> DNE (the degree of the numerator is greater than the degree of the denominator).</p>
+
+            <p><strong>Slant asymptote:</strong> Since the numerator's degree (2) is exactly one more than the denominator's degree (1), perform polynomial long division:</p>
+
+            <p><strong>Step 1.</strong> Divide the leading terms: \( 2x^2 \div x = 2x \).</p>
+            <p>Multiply: \( 2x(x + 1) = 2x^2 + 2x \). Subtract:</p>
+            $$ (2x^2 - x + 3) - (2x^2 + 2x) = -3x + 3 $$
+
+            <p><strong>Step 2.</strong> Divide: \( -3x \div x = -3 \).</p>
+            <p>Multiply: \( -3(x + 1) = -3x - 3 \). Subtract:</p>
+            $$ (-3x + 3) - (-3x - 3) = 6 $$
+
+            <p>So:</p>
+            $$ \frac{2x^2 - x + 3}{x + 1} = 2x - 3 + \frac{6}{x + 1} $$
+
+            <p>As \( x \to \pm\infty \), the remainder \( \frac{6}{x+1} \to 0 \), so the slant asymptote is:</p>
+            $$ y = 2x - 3 $$
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptote</th><td>\( x = -1 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>DNE</td></tr>
+              <tr><th>Slant Asymptote</th><td>\( y = 2x - 3 \)</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="2,-1,3" data-den="1,1"
+                data-va="-1" data-ha="" data-sa-m="2" data-sa-b="-3"
+                data-xmin="-10" data-xmax="8" data-ymin="-20" data-ymax="20"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <!-- Problem 6 -->
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Find all asymptotes of \( f(x) = \dfrac{x^2 + 2x - 1}{x - 3} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Vertical asymptote:</strong> Set the denominator equal to zero:</p>
+            $$ x - 3 = 0 \implies x = 3 $$
+
+            <p><strong>Horizontal asymptote:</strong> DNE.</p>
+
+            <p><strong>Slant asymptote:</strong> Perform polynomial long division:</p>
+
+            <p><strong>Step 1.</strong> Divide the leading terms: \( x^2 \div x = x \).</p>
+            <p>Multiply: \( x(x - 3) = x^2 - 3x \). Subtract:</p>
+            $$ (x^2 + 2x - 1) - (x^2 - 3x) = 5x - 1 $$
+
+            <p><strong>Step 2.</strong> Divide: \( 5x \div x = 5 \).</p>
+            <p>Multiply: \( 5(x - 3) = 5x - 15 \). Subtract:</p>
+            $$ (5x - 1) - (5x - 15) = 14 $$
+
+            <p>So:</p>
+            $$ \frac{x^2 + 2x - 1}{x - 3} = x + 5 + \frac{14}{x - 3} $$
+
+            <p>As \( x \to \pm\infty \), the remainder vanishes, so:</p>
+            $$ y = x + 5 $$
+
+            <table class="asymptote-table">
+              <tr><th>Vertical Asymptote</th><td>\( x = 3 \)</td></tr>
+              <tr><th>Horizontal Asymptote</th><td>DNE</td></tr>
+              <tr><th>Slant Asymptote</th><td>\( y = x + 5 \)</td></tr>
+            </table>
+
+            <div class="plot-container">
+              <canvas class="asymptote-canvas"
+                data-num="1,2,-1" data-den="1,-3"
+                data-va="3" data-ha="" data-sa-m="1" data-sa-b="5"
+                data-xmin="-8" data-xmax="14" data-ymin="-15" data-ymax="25"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domains of Functions – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/domain-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .domain-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .rule-box {
+      background: #f1f0ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Domains of Functions</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <div class="rule-box">
+      <strong>Key Restrictions:</strong><br>
+      <strong>Even roots</strong> (square root, 4th root, …): the radicand must be \( \geq 0 \).<br>
+      <strong>Odd roots</strong> (cube root, 5th root, …): defined for <em>all</em> real numbers.<br>
+      <strong>Rational functions:</strong> the denominator must be \( \neq 0 \).
+    </div>
+
+    <!-- === Square Roots === -->
+    <section class="topic-section">
+      <h2>Square Root Functions</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Find the domain of \( f(x) = \sqrt{3x + 12} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>The expression under the square root must be non-negative:</p>
+            $$ 3x + 12 \geq 0 $$
+            $$ 3x \geq -12 $$
+            $$ x \geq -4 $$
+            <p class="answer">Domain: \( [-4, \infty) \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="Math.sqrt(3*x+12)"
+                data-domain-min="-4"
+                data-xmin="-8" data-xmax="6" data-ymin="-1" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Find the domain of \( f(x) = \sqrt{7 - 2x} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Set the radicand \( \geq 0 \):</p>
+            $$ 7 - 2x \geq 0 $$
+            $$ -2x \geq -7 $$
+            <p>Divide by \( -2 \) and <strong>flip the inequality</strong>:</p>
+            $$ x \leq \frac{7}{2} $$
+            <p class="answer">Domain: \( \left(-\infty,\, \dfrac{7}{2}\right] \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="Math.sqrt(7-2*x)"
+                data-domain-max="3.5"
+                data-xmin="-4" data-xmax="8" data-ymin="-1" data-ymax="6"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Cube Roots === -->
+    <section class="topic-section">
+      <h2>Cube Root Functions</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Find the domain of \( g(x) = \sqrt[3]{2x + 5} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>A cube root is an <strong>odd root</strong>, so it is defined for all real numbers. There is no restriction on \( 2x + 5 \) — it can be positive, negative, or zero.</p>
+            <p class="answer">Domain: \( (-\infty, \infty) \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="Math.cbrt(2*x+5)"
+                data-xmin="-8" data-xmax="6" data-ymin="-4" data-ymax="4"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Rational Functions === -->
+    <section class="topic-section">
+      <h2>Rational Functions</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Find the domain of \( h(x) = \dfrac{3}{x^2 + 4x - 21} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>The denominator cannot equal zero. Factor and solve:</p>
+            $$ x^2 + 4x - 21 = (x + 7)(x - 3) = 0 $$
+            $$ x = -7 \quad \text{or} \quad x = 3 $$
+            <p>Exclude these values from the domain.</p>
+            <p class="answer">Domain: \( (-\infty, -7) \cup (-7, 3) \cup (3, \infty) \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="3/(x*x+4*x-21)"
+                data-exclude="-7,3"
+                data-xmin="-12" data-xmax="8" data-ymin="-4" data-ymax="4"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Find the domain of \( h(x) = \dfrac{x + 1}{x^2 - 9} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Set the denominator \( \neq 0 \):</p>
+            $$ x^2 - 9 = (x - 3)(x + 3) = 0 $$
+            $$ x = 3 \quad \text{or} \quad x = -3 $$
+            <p>Exclude these values.</p>
+            <p class="answer">Domain: \( (-\infty, -3) \cup (-3, 3) \cup (3, \infty) \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="(x+1)/(x*x-9)"
+                data-exclude="-3,3"
+                data-xmin="-8" data-xmax="8" data-ymin="-5" data-ymax="5"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Combined Restrictions === -->
+    <section class="topic-section">
+      <h2>Combined Restrictions</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Find the domain of \( f(x) = \dfrac{\sqrt{x + 2}}{x - 5} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>There are <strong>two restrictions</strong> to satisfy simultaneously:</p>
+            <p><strong>1. Square root:</strong> The radicand must be non-negative:</p>
+            $$ x + 2 \geq 0 \implies x \geq -2 $$
+
+            <p><strong>2. Denominator:</strong> Cannot equal zero:</p>
+            $$ x - 5 \neq 0 \implies x \neq 5 $$
+
+            <p>Combine both: \( x \geq -2 \) <strong>and</strong> \( x \neq 5 \).</p>
+            <p class="answer">Domain: \( [-2, 5) \cup (5, \infty) \)</p>
+            <div class="plot-container">
+              <canvas class="domain-canvas"
+                data-fn="Math.sqrt(x+2)/(x-5)"
+                data-domain-min="-2" data-exclude="5"
+                data-xmin="-5" data-xmax="12" data-ymin="-4" data-ymax="4"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

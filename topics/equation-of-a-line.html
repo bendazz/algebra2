@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equation of a Line – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/line-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .line-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .rule-box {
+      background: #f1f0ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Equation of a Line</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <div class="rule-box">
+      <strong>Point-Slope Form:</strong> \( y - y_1 = m(x - x_1) \)<br>
+      <strong>Parallel lines</strong> have the <em>same</em> slope.<br>
+      <strong>Perpendicular lines</strong> have slopes that are <em>negative reciprocals</em>: \( m_1 \cdot m_2 = -1 \).
+    </div>
+
+    <!-- === Given Point and Slope === -->
+    <section class="topic-section">
+      <h2>Given a Point and a Slope</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Find the equation of the line through \( (2, 5) \) with slope \( m = 3 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Use point-slope form with \( (x_1, y_1) = (2, 5) \) and \( m = 3 \):</p>
+            $$ y - 5 = 3(x - 2) $$
+            $$ y - 5 = 3x - 6 $$
+            $$ y = 3x - 1 $$
+            <p class="answer">Answer: \( y = 3x - 1 \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="3" data-b="-1"
+                data-px="2" data-py="5"
+                data-label="y = 3x − 1"
+                data-xmin="-3" data-xmax="6" data-ymin="-5" data-ymax="10"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Find the equation of the line through \( (-1, 4) \) with slope \( m = -\dfrac{1}{2} \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Use point-slope form:</p>
+            $$ y - 4 = -\frac{1}{2}(x - (-1)) $$
+            $$ y - 4 = -\frac{1}{2}(x + 1) $$
+            $$ y - 4 = -\frac{1}{2}x - \frac{1}{2} $$
+            $$ y = -\frac{1}{2}x + \frac{7}{2} $$
+            <p class="answer">Answer: \( y = -\dfrac{1}{2}x + \dfrac{7}{2} \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="-0.5" data-b="3.5"
+                data-px="-1" data-py="4"
+                data-label="y = −½x + 7/2"
+                data-xmin="-5" data-xmax="8" data-ymin="-1" data-ymax="7"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Parallel Lines === -->
+    <section class="topic-section">
+      <h2>Parallel to a Given Line</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Find the equation of the line through \( (6, -1) \) parallel to \( 2x - 5y = 10 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Step 1 — Find the slope</strong> of the given line by rewriting in slope-intercept form:</p>
+            $$ 2x - 5y = 10 $$
+            $$ -5y = -2x + 10 $$
+            $$ y = \frac{2}{5}x - 2 $$
+            <p>The slope is \( m = \dfrac{2}{5} \). Parallel lines have the same slope.</p>
+
+            <p><strong>Step 2 — Use point-slope form</strong> with \( (6, -1) \) and \( m = \dfrac{2}{5} \):</p>
+            $$ y - (-1) = \frac{2}{5}(x - 6) $$
+            $$ y + 1 = \frac{2}{5}x - \frac{12}{5} $$
+            $$ y = \frac{2}{5}x - \frac{12}{5} - \frac{5}{5} = \frac{2}{5}x - \frac{17}{5} $$
+            <p class="answer">Answer: \( y = \dfrac{2}{5}x - \dfrac{17}{5} \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="0.4" data-b="-3.4"
+                data-px="6" data-py="-1"
+                data-ref-m="0.4" data-ref-b="-2"
+                data-ref-label="2x − 5y = 10"
+                data-label="y = ⅖x − 17/5"
+                data-xmin="-4" data-xmax="12" data-ymin="-6" data-ymax="4"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Find the equation of the line through \( (4, 3) \) parallel to \( y = -2x + 7 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>The given line is already in slope-intercept form with slope \( m = -2 \). Parallel lines share the same slope.</p>
+            <p>Use point-slope form with \( (4, 3) \) and \( m = -2 \):</p>
+            $$ y - 3 = -2(x - 4) $$
+            $$ y - 3 = -2x + 8 $$
+            $$ y = -2x + 11 $$
+            <p class="answer">Answer: \( y = -2x + 11 \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="-2" data-b="11"
+                data-px="4" data-py="3"
+                data-ref-m="-2" data-ref-b="7"
+                data-ref-label="y = −2x + 7"
+                data-label="y = −2x + 11"
+                data-xmin="-1" data-xmax="8" data-ymin="-4" data-ymax="14"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Perpendicular Lines === -->
+    <section class="topic-section">
+      <h2>Perpendicular to a Given Line</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Find the equation of the line through \( (3, -2) \) perpendicular to \( y = 3x + 1 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>The given line has slope \( m = 3 \). The perpendicular slope is the <strong>negative reciprocal</strong>:</p>
+            $$ m_\perp = -\frac{1}{3} $$
+            <p>Use point-slope form with \( (3, -2) \):</p>
+            $$ y - (-2) = -\frac{1}{3}(x - 3) $$
+            $$ y + 2 = -\frac{1}{3}x + 1 $$
+            $$ y = -\frac{1}{3}x - 1 $$
+            <p class="answer">Answer: \( y = -\dfrac{1}{3}x - 1 \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="-0.3333" data-b="-1"
+                data-px="3" data-py="-2"
+                data-ref-m="3" data-ref-b="1"
+                data-ref-label="y = 3x + 1"
+                data-label="y = −⅓x − 1"
+                data-xmin="-4" data-xmax="6" data-ymin="-5" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Find the equation of the line through \( (-2, 5) \) perpendicular to \( 4x + 3y = 12 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Step 1 — Find the slope</strong> of the given line:</p>
+            $$ 4x + 3y = 12 $$
+            $$ 3y = -4x + 12 $$
+            $$ y = -\frac{4}{3}x + 4 $$
+            <p>The slope is \( m = -\dfrac{4}{3} \). The perpendicular slope is:</p>
+            $$ m_\perp = \frac{3}{4} $$
+
+            <p><strong>Step 2 — Use point-slope form</strong> with \( (-2, 5) \):</p>
+            $$ y - 5 = \frac{3}{4}(x - (-2)) $$
+            $$ y - 5 = \frac{3}{4}(x + 2) $$
+            $$ y - 5 = \frac{3}{4}x + \frac{3}{2} $$
+            $$ y = \frac{3}{4}x + \frac{13}{2} $$
+            <p class="answer">Answer: \( y = \dfrac{3}{4}x + \dfrac{13}{2} \)</p>
+            <div class="plot-container">
+              <canvas class="line-canvas"
+                data-m="0.75" data-b="6.5"
+                data-px="-2" data-py="5"
+                data-ref-m="-1.3333" data-ref-b="4"
+                data-ref-label="4x + 3y = 12"
+                data-label="y = ¾x + 13/2"
+                data-xmin="-6" data-xmax="8" data-ymin="-3" data-ymax="12"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

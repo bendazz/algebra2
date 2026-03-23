@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intercepts of Quadratics – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/intercept-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .intercept-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Intercepts of Quadratics</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <p style="color:var(--text-light); margin-bottom:2rem;">
+      For each quadratic, find the y-intercept (set \( x = 0 \)) and the x-intercepts (set \( y = 0 \) and solve).
+    </p>
+
+    <!-- === Factorable === -->
+    <section class="topic-section">
+      <h2>Factorable Quadratics</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Find the x- and y-intercepts of \( y = x^2 - 5x + 6 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 - 0 + 6 = 6 $$
+            <p>So the y-intercept is \( (0, 6) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \) and factor:</p>
+            $$ x^2 - 5x + 6 = 0 $$
+            $$ (x - 2)(x - 3) = 0 $$
+            <p class="answer">y-intercept: \( (0, 6) \) &ensp; x-intercepts: \( (2, 0) \) and \( (3, 0) \)</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="1" data-b="-5" data-c="6"
+                data-xmin="-2" data-xmax="6" data-ymin="-2" data-ymax="9"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Find the x- and y-intercepts of \( y = 2x^2 + 7x - 4 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 + 0 - 4 = -4 $$
+            <p>So the y-intercept is \( (0, -4) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \) and factor:</p>
+            $$ 2x^2 + 7x - 4 = 0 $$
+            <p>We need two numbers that multiply to \( 2 \times (-4) = -8 \) and add to \( 7 \). Those are \( 8 \) and \( -1 \):</p>
+            $$ 2x^2 + 8x - x - 4 = 0 $$
+            $$ 2x(x + 4) - 1(x + 4) = 0 $$
+            $$ (2x - 1)(x + 4) = 0 $$
+            <p class="answer">y-intercept: \( (0, -4) \) &ensp; x-intercepts: \( \left(\dfrac{1}{2},\, 0\right) \) and \( (-4, 0) \)</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="2" data-b="7" data-c="-4"
+                data-xmin="-6" data-xmax="3" data-ymin="-7" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Quadratic Formula needed === -->
+    <section class="topic-section">
+      <h2>Irrational Roots (Quadratic Formula)</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Find the x- and y-intercepts of \( y = x^2 - 4x + 1 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 - 0 + 1 = 1 $$
+            <p>So the y-intercept is \( (0, 1) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \). This doesn't factor nicely, so use the quadratic formula with \( a = 1,\; b = -4,\; c = 1 \):</p>
+            $$ x = \frac{4 \pm \sqrt{16 - 4}}{2} = \frac{4 \pm \sqrt{12}}{2} = \frac{4 \pm 2\sqrt{3}}{2} = 2 \pm \sqrt{3} $$
+            <p class="answer">y-intercept: \( (0, 1) \) &ensp; x-intercepts: \( (2 - \sqrt{3},\, 0) \approx (0.27,\, 0) \) and \( (2 + \sqrt{3},\, 0) \approx (3.73,\, 0) \)</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="1" data-b="-4" data-c="1"
+                data-xmin="-2" data-xmax="6" data-ymin="-4" data-ymax="6"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Find the x- and y-intercepts of \( y = -3x^2 + 6x + 2 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 + 0 + 2 = 2 $$
+            <p>So the y-intercept is \( (0, 2) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \) and use the quadratic formula with \( a = -3,\; b = 6,\; c = 2 \):</p>
+            $$ x = \frac{-6 \pm \sqrt{36 + 24}}{-6} = \frac{-6 \pm \sqrt{60}}{-6} = \frac{-6 \pm 2\sqrt{15}}{-6} = \frac{3 \mp \sqrt{15}}{3} $$
+            <p>Note the sign flip when dividing by \(-6\).</p>
+            <p class="answer">y-intercept: \( (0, 2) \) &ensp; x-intercepts: \( \dfrac{3 - \sqrt{15}}{3} \approx -0.29 \) and \( \dfrac{3 + \sqrt{15}}{3} \approx 2.29 \)</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="-3" data-b="6" data-c="2"
+                data-xmin="-2" data-xmax="4" data-ymin="-4" data-ymax="7"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Special cases === -->
+    <section class="topic-section">
+      <h2>Special Cases</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Find the x- and y-intercepts of \( y = x^2 + 2x + 5 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 + 0 + 5 = 5 $$
+            <p>So the y-intercept is \( (0, 5) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \) and check the discriminant:</p>
+            $$ b^2 - 4ac = (2)^2 - 4(1)(5) = 4 - 20 = -16 $$
+            <p>The discriminant is <strong>negative</strong>, so there are <strong>no real x-intercepts</strong>. The parabola opens up (\( a = 1 > 0 \)) and sits entirely above the x-axis.</p>
+            <p class="answer">y-intercept: \( (0, 5) \) &ensp; x-intercepts: none (discriminant \( < 0 \))</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="1" data-b="2" data-c="5"
+                data-xmin="-5" data-xmax="4" data-ymin="-1" data-ymax="12"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Find the x- and y-intercepts of \( y = 4x^2 - 12x + 9 \).
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>y-intercept:</strong> Set \( x = 0 \):</p>
+            $$ y = 0 - 0 + 9 = 9 $$
+            <p>So the y-intercept is \( (0, 9) \).</p>
+            <p><strong>x-intercepts:</strong> Set \( y = 0 \). Recognize this as a perfect square:</p>
+            $$ 4x^2 - 12x + 9 = (2x - 3)^2 = 0 $$
+            $$ 2x - 3 = 0 \implies x = \frac{3}{2} $$
+            <p>There is exactly <strong>one x-intercept</strong> (a repeated root). The vertex of the parabola sits on the x-axis.</p>
+            <p class="answer">y-intercept: \( (0, 9) \) &ensp; x-intercept: \( \left(\dfrac{3}{2},\, 0\right) \) (double root)</p>
+            <div class="plot-container">
+              <canvas class="intercept-canvas"
+                data-a="4" data-b="-12" data-c="9"
+                data-xmin="-1" data-xmax="4" data-ymin="-2" data-ymax="12"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

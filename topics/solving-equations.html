@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solving Equations – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Solving Equations</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <!-- === Quadratic Equations === -->
+    <section class="topic-section">
+      <h2>Quadratic Equations</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Solve: \( 3x^2 - 10x + 6 = 0 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Use the quadratic formula with \( a=3,\; b=-10,\; c=6 \):</p>
+            $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} = \frac{10 \pm \sqrt{100 - 72}}{6} = \frac{10 \pm \sqrt{28}}{6} $$
+            <p>Simplify \( \sqrt{28} = 2\sqrt{7} \):</p>
+            $$ x = \frac{10 \pm 2\sqrt{7}}{6} = \frac{5 \pm \sqrt{7}}{3} $$
+            <p class="answer">Answer: \( x = \dfrac{5 + \sqrt{7}}{3} \) or \( x = \dfrac{5 - \sqrt{7}}{3} \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Solve: \( 5x^2 + 2x - 4 = 0 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Apply the quadratic formula with \( a=5,\; b=2,\; c=-4 \):</p>
+            $$ x = \frac{-2 \pm \sqrt{4 + 80}}{10} = \frac{-2 \pm \sqrt{84}}{10} $$
+            <p>Simplify \( \sqrt{84} = 2\sqrt{21} \):</p>
+            $$ x = \frac{-2 \pm 2\sqrt{21}}{10} = \frac{-1 \pm \sqrt{21}}{5} $$
+            <p class="answer">Answer: \( x = \dfrac{-1 + \sqrt{21}}{5} \) or \( x = \dfrac{-1 - \sqrt{21}}{5} \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Factor by Grouping (Cubic) === -->
+    <section class="topic-section">
+      <h2>Factor by Grouping</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Solve: \( 8x^3 + 12x^2 - 2x - 3 = 0 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Group the terms in pairs:</p>
+            $$ (8x^3 + 12x^2) + (-2x - 3) = 0 $$
+            <p>Factor each group:</p>
+            $$ 4x^2(2x + 3) - 1(2x + 3) = 0 $$
+            <p>Factor out the common binomial:</p>
+            $$ (4x^2 - 1)(2x + 3) = 0 $$
+            <p>Recognize \( 4x^2 - 1 \) as a difference of squares:</p>
+            $$ (2x - 1)(2x + 1)(2x + 3) = 0 $$
+            <p class="answer">Answer: \( x = \dfrac{1}{2},\; x = -\dfrac{1}{2},\; x = -\dfrac{3}{2} \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Solve: \( 27x^3 + 18x^2 - 3x - 2 = 0 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Group the terms in pairs:</p>
+            $$ (27x^3 + 18x^2) + (-3x - 2) = 0 $$
+            <p>Factor each group:</p>
+            $$ 9x^2(3x + 2) - 1(3x + 2) = 0 $$
+            <p>Factor out the common binomial:</p>
+            $$ (9x^2 - 1)(3x + 2) = 0 $$
+            <p>Recognize \( 9x^2 - 1 \) as a difference of squares:</p>
+            $$ (3x - 1)(3x + 1)(3x + 2) = 0 $$
+            <p class="answer">Answer: \( x = \dfrac{1}{3},\; x = -\dfrac{1}{3},\; x = -\dfrac{2}{3} \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Exponential Equations (Matching Bases) === -->
+    <section class="topic-section">
+      <h2>Exponential Equations</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Solve: \( 3^{2x+1} = 243 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Rewrite 243 as a power of 3:</p>
+            $$ 3^{2x+1} = 3^5 $$
+            <p>Since the bases are equal, set the exponents equal:</p>
+            $$ 2x + 1 = 5 $$
+            $$ 2x = 4 $$
+            <p class="answer">Answer: \( x = 2 \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Solve: \( 5^{4x-3} = 625 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Rewrite 625 as a power of 5:</p>
+            $$ 5^{4x-3} = 5^4 $$
+            <p>Set the exponents equal:</p>
+            $$ 4x - 3 = 4 $$
+            $$ 4x = 7 $$
+            <p class="answer">Answer: \( x = \dfrac{7}{4} \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Exponential with Fractional Base === -->
+    <section class="topic-section">
+      <h2>Exponential Equations (Fractional Bases)</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">7.</span>
+          Solve: \( \left(\dfrac{1}{9}\right)^x = 3^{x+4} \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Rewrite \( \frac{1}{9} \) as \( 3^{-2} \):</p>
+            $$ \left(3^{-2}\right)^x = 3^{x+4} $$
+            $$ 3^{-2x} = 3^{x+4} $$
+            <p>Set the exponents equal:</p>
+            $$ -2x = x + 4 $$
+            $$ -3x = 4 $$
+            <p class="answer">Answer: \( x = -\dfrac{4}{3} \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">8.</span>
+          Solve: \( \left(\dfrac{1}{8}\right)^x = 2^{2x+9} \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Rewrite \( \frac{1}{8} \) as \( 2^{-3} \):</p>
+            $$ \left(2^{-3}\right)^x = 2^{2x+9} $$
+            $$ 2^{-3x} = 2^{2x+9} $$
+            <p>Set the exponents equal:</p>
+            $$ -3x = 2x + 9 $$
+            $$ -5x = 9 $$
+            <p class="answer">Answer: \( x = -\dfrac{9}{5} \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Logarithmic Equations === -->
+    <section class="topic-section">
+      <h2>Logarithmic Equations</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">9.</span>
+          Solve: \( \log(5x) + \log(x - 1) = 2 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Use the product rule for logarithms:</p>
+            $$ \log\bigl(5x(x - 1)\bigr) = 2 $$
+            <p>Convert to exponential form (\(\log\) means base 10):</p>
+            $$ 5x(x - 1) = 10^2 = 100 $$
+            $$ 5x^2 - 5x = 100 $$
+            $$ x^2 - x - 20 = 0 $$
+            $$ (x - 5)(x + 4) = 0 $$
+            <p>So \( x = 5 \) or \( x = -4 \). Check the domain: we need \( 5x > 0 \) and \( x - 1 > 0 \), so \( x > 1 \). Reject \( x = -4 \).</p>
+            <p class="answer">Answer: \( x = 5 \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">10.</span>
+          Solve: \( \log(3x) + \log(x + 1) = \log(18) \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Use the product rule on the left side:</p>
+            $$ \log\bigl(3x(x + 1)\bigr) = \log(18) $$
+            <p>Since the logs are equal, the arguments are equal:</p>
+            $$ 3x(x + 1) = 18 $$
+            $$ 3x^2 + 3x - 18 = 0 $$
+            $$ x^2 + x - 6 = 0 $$
+            $$ (x + 3)(x - 2) = 0 $$
+            <p>So \( x = 2 \) or \( x = -3 \). Check the domain: we need \( 3x > 0 \) and \( x + 1 > 0 \), so \( x > 0 \). Reject \( x = -3 \).</p>
+            <p class="answer">Answer: \( x = 2 \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Logarithmic Equations (Specific Base) === -->
+    <section class="topic-section">
+      <h2>Logarithmic Equations (Other Bases)</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">11.</span>
+          Solve: \( 5 + 3\log_2(x - 1) = 17 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Isolate the logarithm:</p>
+            $$ 3\log_2(x - 1) = 12 $$
+            $$ \log_2(x - 1) = 4 $$
+            <p>Convert to exponential form:</p>
+            $$ x - 1 = 2^4 = 16 $$
+            <p class="answer">Answer: \( x = 17 \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">12.</span>
+          Solve: \( 1 + 4\log_5(2x + 3) = 9 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Isolate the logarithm:</p>
+            $$ 4\log_5(2x + 3) = 8 $$
+            $$ \log_5(2x + 3) = 2 $$
+            <p>Convert to exponential form:</p>
+            $$ 2x + 3 = 5^2 = 25 $$
+            $$ 2x = 22 $$
+            <p class="answer">Answer: \( x = 11 \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Absolute Value === -->
+    <section class="topic-section">
+      <h2>Absolute Value Equations</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">13.</span>
+          Solve: \( |3x + 4| = 7 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Set up two cases:</p>
+            <p><strong>Case 1:</strong> \( 3x + 4 = 7 \)</p>
+            $$ 3x = 3 \implies x = 1 $$
+            <p><strong>Case 2:</strong> \( 3x + 4 = -7 \)</p>
+            $$ 3x = -11 \implies x = -\frac{11}{3} $$
+            <p class="answer">Answer: \( x = 1 \) or \( x = -\dfrac{11}{3} \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">14.</span>
+          Solve: \( |5x - 2| = 12 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Set up two cases:</p>
+            <p><strong>Case 1:</strong> \( 5x - 2 = 12 \)</p>
+            $$ 5x = 14 \implies x = \frac{14}{5} $$
+            <p><strong>Case 2:</strong> \( 5x - 2 = -12 \)</p>
+            $$ 5x = -10 \implies x = -2 $$
+            <p class="answer">Answer: \( x = \dfrac{14}{5} \) or \( x = -2 \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === Radical Equations === -->
+    <section class="topic-section">
+      <h2>Radical Equations</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">15.</span>
+          Solve: \( \sqrt{2x + 5} = x + 1 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Step 1 — Square both sides</strong> to eliminate the radical:</p>
+            $$ 2x + 5 = (x + 1)^2 $$
+            $$ 2x + 5 = x^2 + 2x + 1 $$
+
+            <p><strong>Step 2 — Rearrange</strong> into standard form:</p>
+            $$ 0 = x^2 + 2x + 1 - 2x - 5 $$
+            $$ 0 = x^2 - 4 $$
+            $$ (x - 2)(x + 2) = 0 $$
+            $$ x = 2 \quad \text{or} \quad x = -2 $$
+
+            <p><strong>Step 3 — Check for extraneous solutions</strong> (squaring can introduce false solutions!):</p>
+            <p>\( x = 2 \): \( \sqrt{2(2)+5} = \sqrt{9} = 3 \) and \( 2+1 = 3 \;\checkmark \)</p>
+            <p>\( x = -2 \): \( \sqrt{2(-2)+5} = \sqrt{1} = 1 \) and \( -2+1 = -1 \;\boldsymbol{\times} \)</p>
+            <p>Since \( 1 \neq -1 \), the solution \( x = -2 \) is <strong>extraneous</strong>.</p>
+            <p class="answer">Answer: \( x = 2 \)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">16.</span>
+          Solve: \( \sqrt{7 - x} = x + 5 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p><strong>Step 1 — Square both sides:</strong></p>
+            $$ 7 - x = (x + 5)^2 $$
+            $$ 7 - x = x^2 + 10x + 25 $$
+
+            <p><strong>Step 2 — Rearrange:</strong></p>
+            $$ 0 = x^2 + 10x + 25 + x - 7 $$
+            $$ 0 = x^2 + 11x + 18 $$
+            $$ (x + 2)(x + 9) = 0 $$
+            $$ x = -2 \quad \text{or} \quad x = -9 $$
+
+            <p><strong>Step 3 — Check for extraneous solutions:</strong></p>
+            <p>\( x = -2 \): \( \sqrt{7-(-2)} = \sqrt{9} = 3 \) and \( -2+5 = 3 \;\checkmark \)</p>
+            <p>\( x = -9 \): \( \sqrt{7-(-9)} = \sqrt{16} = 4 \) and \( -9+5 = -4 \;\boldsymbol{\times} \)</p>
+            <p>Since \( 4 \neq -4 \), the solution \( x = -9 \) is <strong>extraneous</strong>.</p>
+            <p class="answer">Answer: \( x = -2 \)</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

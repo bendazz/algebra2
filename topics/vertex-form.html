@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex Form – Algebra 2 Review</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="../css/exercises.css">
+  <script defer src="../js/parabola-plot.js"></script>
+  <style>
+    .plot-container {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .parabola-canvas {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 4 / 3;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="../index.html">&larr; Back to Topics</a>
+    <h1>Vertex Form</h1>
+  </header>
+
+  <main class="exercises-container">
+
+    <p style="color:var(--text-light); margin-bottom:2rem;">
+      Rewrite each parabola in vertex form \( y = a(x - h)^2 + k \) by completing the square.
+      Identify the vertex and whether the parabola opens up or down.
+    </p>
+
+    <!-- === a = 1 === -->
+    <section class="topic-section">
+      <h2>Leading Coefficient a = 1</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">1.</span>
+          Rewrite in vertex form: \( y = x^2 + 6x + 5 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Group the \( x \)-terms and complete the square:</p>
+            $$ y = (x^2 + 6x) + 5 $$
+            <p>Take half of 6, which is 3, and square it: \( 3^2 = 9 \). Add and subtract 9:</p>
+            $$ y = (x^2 + 6x + 9) - 9 + 5 $$
+            $$ y = (x + 3)^2 - 4 $$
+            <p>The parabola opens <strong>up</strong> (\( a = 1 > 0 \)).</p>
+            <p class="answer">Vertex form: \( y = (x + 3)^2 - 4 \), &ensp; Vertex: \( (-3, -4) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="1" data-h="-3" data-k="-4"
+                data-label="y = (x+3)² − 4"
+                data-xmin="-8" data-xmax="3" data-ymin="-6" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">2.</span>
+          Rewrite in vertex form: \( y = x^2 - 8x + 13 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Group the \( x \)-terms and complete the square:</p>
+            $$ y = (x^2 - 8x) + 13 $$
+            <p>Half of \(-8\) is \(-4\), and \((-4)^2 = 16\). Add and subtract 16:</p>
+            $$ y = (x^2 - 8x + 16) - 16 + 13 $$
+            $$ y = (x - 4)^2 - 3 $$
+            <p>The parabola opens <strong>up</strong> (\( a = 1 > 0 \)).</p>
+            <p class="answer">Vertex form: \( y = (x - 4)^2 - 3 \), &ensp; Vertex: \( (4, -3) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="1" data-h="4" data-k="-3"
+                data-label="y = (x−4)² − 3"
+                data-xmin="-1" data-xmax="9" data-ymin="-5" data-ymax="10"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === a > 1 === -->
+    <section class="topic-section">
+      <h2>Leading Coefficient a &gt; 1</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">3.</span>
+          Rewrite in vertex form: \( y = 2x^2 + 12x + 14 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Factor the leading coefficient out of the \( x \)-terms:</p>
+            $$ y = 2(x^2 + 6x) + 14 $$
+            <p>Complete the square inside the parentheses. Half of 6 is 3, and \( 3^2 = 9 \):</p>
+            $$ y = 2(x^2 + 6x + 9) + 14 - 2(9) $$
+            <p>Be careful — the 9 is multiplied by 2 when brought outside:</p>
+            $$ y = 2(x + 3)^2 + 14 - 18 $$
+            $$ y = 2(x + 3)^2 - 4 $$
+            <p>The parabola opens <strong>up</strong> (\( a = 2 > 0 \)) and is <strong>narrower</strong> than \( x^2 \).</p>
+            <p class="answer">Vertex form: \( y = 2(x + 3)^2 - 4 \), &ensp; Vertex: \( (-3, -4) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="2" data-h="-3" data-k="-4"
+                data-label="y = 2(x+3)² − 4"
+                data-xmin="-7" data-xmax="2" data-ymin="-6" data-ymax="10"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">4.</span>
+          Rewrite in vertex form: \( y = 3x^2 - 18x + 23 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Factor the leading coefficient out of the \( x \)-terms:</p>
+            $$ y = 3(x^2 - 6x) + 23 $$
+            <p>Half of \(-6\) is \(-3\), and \((-3)^2 = 9\):</p>
+            $$ y = 3(x^2 - 6x + 9) + 23 - 3(9) $$
+            $$ y = 3(x - 3)^2 + 23 - 27 $$
+            $$ y = 3(x - 3)^2 - 4 $$
+            <p>The parabola opens <strong>up</strong> (\( a = 3 > 0 \)) and is <strong>narrower</strong> than \( x^2 \).</p>
+            <p class="answer">Vertex form: \( y = 3(x - 3)^2 - 4 \), &ensp; Vertex: \( (3, -4) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="3" data-h="3" data-k="-4"
+                data-label="y = 3(x−3)² − 4"
+                data-xmin="-1" data-xmax="7" data-ymin="-6" data-ymax="10"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- === a < 0 === -->
+    <section class="topic-section">
+      <h2>Negative Leading Coefficient</h2>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">5.</span>
+          Rewrite in vertex form: \( y = -x^2 + 4x + 1 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Factor \(-1\) out of the \( x \)-terms:</p>
+            $$ y = -(x^2 - 4x) + 1 $$
+            <p>Half of \(-4\) is \(-2\), and \((-2)^2 = 4\):</p>
+            $$ y = -(x^2 - 4x + 4) + 1 + 4 $$
+            <p>The \(+4\) inside becomes \(+4\) outside because of the negative sign:</p>
+            $$ y = -(x - 2)^2 + 5 $$
+            <p>The parabola opens <strong>down</strong> (\( a = -1 < 0 \)), so the vertex is a <strong>maximum</strong>.</p>
+            <p class="answer">Vertex form: \( y = -(x - 2)^2 + 5 \), &ensp; Vertex: \( (2, 5) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="-1" data-h="2" data-k="5"
+                data-label="y = −(x−2)² + 5"
+                data-xmin="-3" data-xmax="7" data-ymin="-6" data-ymax="8"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="problem">
+        <div class="problem-statement">
+          <span class="problem-number">6.</span>
+          Rewrite in vertex form: \( y = -2x^2 - 8x + 3 \)
+        </div>
+        <details class="solution">
+          <summary>Reveal Solution</summary>
+          <div class="solution-body">
+            <p>Factor \(-2\) out of the \( x \)-terms:</p>
+            $$ y = -2(x^2 + 4x) + 3 $$
+            <p>Half of 4 is 2, and \( 2^2 = 4 \):</p>
+            $$ y = -2(x^2 + 4x + 4) + 3 - (-2)(4) $$
+            $$ y = -2(x + 2)^2 + 3 + 8 $$
+            $$ y = -2(x + 2)^2 + 11 $$
+            <p>The parabola opens <strong>down</strong> (\( a = -2 < 0 \)) and is <strong>narrower</strong> than \( x^2 \). The vertex is a <strong>maximum</strong>.</p>
+            <p class="answer">Vertex form: \( y = -2(x + 2)^2 + 11 \), &ensp; Vertex: \( (-2, 11) \)</p>
+            <div class="plot-container">
+              <canvas class="parabola-canvas"
+                data-a="-2" data-h="-2" data-k="11"
+                data-label="y = −2(x+2)² + 11"
+                data-xmin="-7" data-xmax="3" data-ymin="-4" data-ymax="14"></canvas>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

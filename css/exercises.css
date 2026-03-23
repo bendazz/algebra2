@@ -1,0 +1,79 @@
+/* === Topic Sections === */
+.topic-section {
+  margin-bottom: 2.5rem;
+}
+
+.topic-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+/* === Problem Cards === */
+.problem {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.problem-statement {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+}
+
+.problem-number {
+  font-weight: 700;
+  color: var(--primary);
+  margin-right: 0.4rem;
+}
+
+/* === Reveal Solution Toggle === */
+.solution summary {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary);
+  background: #f1f0ff;
+  border-top: 1px solid #e8e6ff;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.solution summary:hover {
+  background: #e4e2ff;
+}
+
+.solution summary::marker {
+  color: var(--primary);
+}
+
+.solution-body {
+  padding: 1.25rem 1.5rem;
+  background: #fafafe;
+  border-top: 1px solid #e8e6ff;
+  line-height: 1.8;
+}
+
+.solution-body p {
+  margin-bottom: 0.6rem;
+}
+
+.solution-body .katex-display {
+  margin: 0.75rem 0;
+}
+
+/* === Answer highlight === */
+.answer {
+  font-weight: 700;
+  color: var(--primary-dark);
+  background: #ede9fe;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
